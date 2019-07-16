@@ -7,15 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73CC8F7E4A6D5BA5FA22C3A9 /* libPods-PlacesProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3AD0E62DCE7AB48799E30E /* libPods-PlacesProject.a */; };
+		FA02F0D8216774EC00ABBA2F /* PickerSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA02F0D7216774EC00ABBA2F /* PickerSearchViewController.m */; };
 		FAEC8363216604E2000E1DA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEC8362216604E2000E1DA7 /* AppDelegate.m */; };
 		FAEC8366216604E2000E1DA7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEC8365216604E2000E1DA7 /* ViewController.m */; };
 		FAEC8369216604E2000E1DA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEC8367216604E2000E1DA7 /* Main.storyboard */; };
 		FAEC836B216604E6000E1DA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEC836A216604E6000E1DA7 /* Assets.xcassets */; };
 		FAEC836E216604E6000E1DA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEC836C216604E6000E1DA7 /* LaunchScreen.storyboard */; };
 		FAEC8371216604E6000E1DA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEC8370216604E6000E1DA7 /* main.m */; };
+		FAEC837A216611BE000E1DA7 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEC8379216611BE000E1DA7 /* SearchViewController.m */; };
+		FAEC837E21661734000E1DA7 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEC837D21661734000E1DA7 /* ResultViewController.m */; };
+		FAEC838221661EB9000E1DA7 /* TableDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEC838121661EB9000E1DA7 /* TableDataViewController.m */; };
+		FAEC83862166240F000E1DA7 /* FetcherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEC83852166240F000E1DA7 /* FetcherViewController.m */; };
+		FAEC838A21665303000E1DA7 /* CustomSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEC838921665303000E1DA7 /* CustomSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68B7A8EBF2A39ED0EC38E8D3 /* Pods-PlacesProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlacesProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlacesProject/Pods-PlacesProject.debug.xcconfig"; sourceTree = "<group>"; };
+		BD3AD0E62DCE7AB48799E30E /* libPods-PlacesProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlacesProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFFBB21D2EF622DA9CC0A477 /* Pods-PlacesProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlacesProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlacesProject/Pods-PlacesProject.release.xcconfig"; sourceTree = "<group>"; };
+		FA02F0D6216774EC00ABBA2F /* PickerSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerSearchViewController.h; sourceTree = "<group>"; };
+		FA02F0D7216774EC00ABBA2F /* PickerSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickerSearchViewController.m; sourceTree = "<group>"; };
 		FAEC835E216604E2000E1DA7 /* PlacesProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlacesProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEC8361216604E2000E1DA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAEC8362216604E2000E1DA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +38,16 @@
 		FAEC836D216604E6000E1DA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAEC836F216604E6000E1DA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAEC8370216604E6000E1DA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAEC8378216611BE000E1DA7 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		FAEC8379216611BE000E1DA7 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		FAEC837C21661734000E1DA7 /* ResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		FAEC837D21661734000E1DA7 /* ResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		FAEC838021661EB9000E1DA7 /* TableDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableDataViewController.h; sourceTree = "<group>"; };
+		FAEC838121661EB9000E1DA7 /* TableDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableDataViewController.m; sourceTree = "<group>"; };
+		FAEC83842166240F000E1DA7 /* FetcherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FetcherViewController.h; sourceTree = "<group>"; };
+		FAEC83852166240F000E1DA7 /* FetcherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FetcherViewController.m; sourceTree = "<group>"; };
+		FAEC838821665303000E1DA7 /* CustomSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSearchViewController.h; sourceTree = "<group>"; };
+		FAEC838921665303000E1DA7 /* CustomSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +55,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73CC8F7E4A6D5BA5FA22C3A9 /* libPods-PlacesProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03BE3C86BB451831375B9BE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD3AD0E62DCE7AB48799E30E /* libPods-PlacesProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39D628D75695B0A520660066 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68B7A8EBF2A39ED0EC38E8D3 /* Pods-PlacesProject.debug.xcconfig */,
+				BFFBB21D2EF622DA9CC0A477 /* Pods-PlacesProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA02F0D5216774CC00ABBA2F /* Picker search */ = {
+			isa = PBXGroup;
+			children = (
+				FA02F0D6216774EC00ABBA2F /* PickerSearchViewController.h */,
+				FA02F0D7216774EC00ABBA2F /* PickerSearchViewController.m */,
+			);
+			path = "Picker search";
+			sourceTree = "<group>";
+		};
 		FAEC8355216604E2000E1DA7 = {
 			isa = PBXGroup;
 			children = (
 				FAEC8360216604E2000E1DA7 /* PlacesProject */,
 				FAEC835F216604E2000E1DA7 /* Products */,
+				39D628D75695B0A520660066 /* Pods */,
+				03BE3C86BB451831375B9BE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +109,12 @@
 		FAEC8360216604E2000E1DA7 /* PlacesProject */ = {
 			isa = PBXGroup;
 			children = (
+				FA02F0D5216774CC00ABBA2F /* Picker search */,
+				FAEC8387216652E9000E1DA7 /* Custom search */,
+				FAEC8383216623FE000E1DA7 /* Fetcher */,
+				FAEC837F21661E95000E1DA7 /* Table data source */,
+				FAEC837B21661711000E1DA7 /* Search Result Controller */,
+				FAEC837721661185000E1DA7 /* Search full screen */,
 				FAEC8361216604E2000E1DA7 /* AppDelegate.h */,
 				FAEC8362216604E2000E1DA7 /* AppDelegate.m */,
 				FAEC8364216604E2000E1DA7 /* ViewController.h */,
@@ -71,6 +128,51 @@
 			path = PlacesProject;
 			sourceTree = "<group>";
 		};
+		FAEC837721661185000E1DA7 /* Search full screen */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC8378216611BE000E1DA7 /* SearchViewController.h */,
+				FAEC8379216611BE000E1DA7 /* SearchViewController.m */,
+			);
+			path = "Search full screen";
+			sourceTree = "<group>";
+		};
+		FAEC837B21661711000E1DA7 /* Search Result Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC837C21661734000E1DA7 /* ResultViewController.h */,
+				FAEC837D21661734000E1DA7 /* ResultViewController.m */,
+			);
+			path = "Search Result Controller";
+			sourceTree = "<group>";
+		};
+		FAEC837F21661E95000E1DA7 /* Table data source */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC838021661EB9000E1DA7 /* TableDataViewController.h */,
+				FAEC838121661EB9000E1DA7 /* TableDataViewController.m */,
+			);
+			path = "Table data source";
+			sourceTree = "<group>";
+		};
+		FAEC8383216623FE000E1DA7 /* Fetcher */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC83842166240F000E1DA7 /* FetcherViewController.h */,
+				FAEC83852166240F000E1DA7 /* FetcherViewController.m */,
+			);
+			path = Fetcher;
+			sourceTree = "<group>";
+		};
+		FAEC8387216652E9000E1DA7 /* Custom search */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC838821665303000E1DA7 /* CustomSearchViewController.h */,
+				FAEC838921665303000E1DA7 /* CustomSearchViewController.m */,
+			);
+			path = "Custom search";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAEC8374216604E6000E1DA7 /* Build configuration list for PBXNativeTarget "PlacesProject" */;
 			buildPhases = (
+				0110DDEEC17D5373A480BEE3 /* [CP] Check Pods Manifest.lock */,
 				FAEC835A216604E2000E1DA7 /* Sources */,
 				FAEC835B216604E2000E1DA7 /* Frameworks */,
 				FAEC835C216604E2000E1DA7 /* Resources */,
+				832C4D774F6E9F0AE2EAB8B4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,14 +240,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0110DDEEC17D5373A480BEE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PlacesProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		832C4D774F6E9F0AE2EAB8B4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PlacesProject/Pods-PlacesProject-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlacesProject/Pods-PlacesProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FAEC835A216604E2000E1DA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FAEC8366216604E2000E1DA7 /* ViewController.m in Sources */,
+				FAEC83862166240F000E1DA7 /* FetcherViewController.m in Sources */,
 				FAEC8371216604E6000E1DA7 /* main.m in Sources */,
+				FAEC837A216611BE000E1DA7 /* SearchViewController.m in Sources */,
+				FAEC838221661EB9000E1DA7 /* TableDataViewController.m in Sources */,
+				FAEC837E21661734000E1DA7 /* ResultViewController.m in Sources */,
 				FAEC8363216604E2000E1DA7 /* AppDelegate.m in Sources */,
+				FA02F0D8216774EC00ABBA2F /* PickerSearchViewController.m in Sources */,
+				FAEC838A21665303000E1DA7 /* CustomSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +444,7 @@
 		};
 		FAEC8375216604E6000E1DA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68B7A8EBF2A39ED0EC38E8D3 /* Pods-PlacesProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +461,7 @@
 		};
 		FAEC8376216604E6000E1DA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFFBB21D2EF622DA9CC0A477 /* Pods-PlacesProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+@import GooglePlaces;
+@import GoogleMaps;
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,60 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //AIzaSyDHEtkbk1-GkQ0zuAbYuxvV97CCP-zmAqM
+    [GMSPlacesClient provideAPIKey:@"AIzaSyCjCN5-spqlFJxxoTNVcgVjbSqSJTCR0Cc"];
+    [GMSServices provideAPIKey:@"AIzaSyCjCN5-spqlFJxxoTNVcgVjbSqSJTCR0Cc"];
+    
+    // Define some colors.
+    /*UIColor *darkGray = [UIColor redColor];
+    UIColor *lightGray = [UIColor yellowColor];
+    
+    // Navigation bar background.
+    [[UINavigationBar appearance] setBarTintColor:darkGray];
+    [[UINavigationBar appearance] setTintColor:lightGray];
+    
+    // Color of typed text in the search bar.
+    NSDictionary *searchBarTextAttributes = @{
+                                              NSForegroundColorAttributeName: lightGray,
+                                              NSFontAttributeName : [UIFont systemFontOfSize:[UIFont systemFontSize]]
+                                              };
+    [UITextField appearanceWhenContainedInInstancesOfClasses:@[[UISearchBar class]]]
+    .defaultTextAttributes = searchBarTextAttributes;
+    
+    // Color of the placeholder text in the search bar prior to text entry.
+    NSDictionary *placeholderAttributes = @{
+                                            NSForegroundColorAttributeName: lightGray,
+                                            NSFontAttributeName : [UIFont systemFontOfSize:[UIFont systemFontSize]]
+                                            };
+    
+    // Color of the default search text.
+    // NOTE: In a production scenario, "Search" would be a localized string.
+    NSAttributedString *attributedPlaceholder =
+    [[NSAttributedString alloc] initWithString:@"Search"
+                                    attributes:placeholderAttributes];
+    [UITextField appearanceWhenContainedInInstancesOfClasses:@[[UISearchBar class]]]
+    .attributedPlaceholder = attributedPlaceholder;
+    
+    // Color of the in-progress spinner.
+    [[UIActivityIndicatorView appearance] setColor:lightGray];
+    
+    // To style the two image icons in the search bar (the magnifying glass
+    // icon and the 'clear text' icon), replace them with different images.
+    [[UISearchBar appearance] setImage:[UIImage imageNamed:@"custom_clear_x_high"]
+                      forSearchBarIcon:UISearchBarIconClear
+                                 state:UIControlStateHighlighted];
+    [[UISearchBar appearance] setImage:[UIImage imageNamed:@"custom_clear_x"]
+                      forSearchBarIcon:UISearchBarIconClear
+                                 state:UIControlStateNormal];
+    [[UISearchBar appearance] setImage:[UIImage imageNamed:@"custom_search"]
+                      forSearchBarIcon:UISearchBarIconSearch
+                                 state:UIControlStateNormal];
+    
+    // Color of selected table cells.
+    UIView *selectedBackgroundView = [[UIView alloc] init];
+    selectedBackgroundView.backgroundColor = [UIColor lightGrayColor];
+    [UITableViewCell appearanceWhenContainedIn:[GMSAutocompleteViewController class], nil]
+    .selectedBackgroundView = selectedBackgroundView;*/
     return YES;
 }
 

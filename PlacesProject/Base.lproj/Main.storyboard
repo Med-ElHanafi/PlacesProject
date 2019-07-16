@@ -1,24 +1,324 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uzw-9M-r4j">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Custom search-->
+        <scene sceneID="hQL-p0-RT6">
+            <objects>
+                <viewController id="bkj-Jm-Fr6" customClass="CustomSearchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="83v-Zn-Voz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3mZ-6g-SJ6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom search" id="8k9-jg-wqi">
+                        <barButtonItem key="backBarButtonItem" title=" " id="oAB-qM-YPL"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0K-WP-qAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="zqv-5h-FuP">
+                    <connections>
+                        <outlet property="delegate" destination="bkj-Jm-Fr6" id="h9G-UH-F0C"/>
+                        <outlet property="searchContentsController" destination="bkj-Jm-Fr6" id="tX2-RN-d8d"/>
+                        <outlet property="searchResultsDataSource" destination="bkj-Jm-Fr6" id="7oY-pc-6Of"/>
+                        <outlet property="searchResultsDelegate" destination="bkj-Jm-Fr6" id="kXd-5m-yny"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-69" y="143"/>
+        </scene>
+        <!--Current Location-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1K-3e-75e" customClass="name">
+                                <rect key="frame" x="20" y="84" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place adress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejd-H2-2qs" customClass="adress">
+                                <rect key="frame" x="20" y="125" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttS-O2-U4N">
+                                <rect key="frame" x="20" y="196" width="335" height="30"/>
+                                <state key="normal" title="Get Current Location"/>
+                                <connections>
+                                    <action selector="getCurrentPlace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3PO-cj-d6Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xs8-bU-CHM">
+                                <rect key="frame" x="20" y="617" width="75" height="30"/>
+                                <state key="normal" title="Full screen"/>
+                                <connections>
+                                    <segue destination="mjk-Kw-QEa" kind="push" id="Vjb-E5-hfI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfG-ce-uGD">
+                                <rect key="frame" x="131.5" y="617" width="112" height="30"/>
+                                <state key="normal" title="Result controller"/>
+                                <connections>
+                                    <segue destination="4S7-8m-nrc" kind="push" id="RRl-tI-MOQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVL-Pg-N6t">
+                                <rect key="frame" x="282" y="617" width="73" height="30"/>
+                                <state key="normal" title="Table Data"/>
+                                <connections>
+                                    <segue destination="gBD-oZ-ZTJ" kind="push" id="Oxl-oS-ASv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gt-RY-dMC">
+                                <rect key="frame" x="161" y="567" width="53" height="30"/>
+                                <state key="normal" title="Fetcher"/>
+                                <connections>
+                                    <segue destination="Uj9-rK-B5L" kind="push" id="Y6V-9O-4Fx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJp-xR-m9U">
+                                <rect key="frame" x="20" y="567" width="84" height="30"/>
+                                <state key="normal" title="Place picker"/>
+                                <connections>
+                                    <segue destination="zbH-mS-uLI" kind="push" id="r3y-H5-aYU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4k-gr-2Os">
+                                <rect key="frame" x="251" y="567" width="104" height="30"/>
+                                <state key="normal" title="Custom search"/>
+                                <connections>
+                                    <segue destination="bkj-Jm-Fr6" kind="push" id="csy-Q9-B5d"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qfG-ce-uGD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="00j-Jn-7yN"/>
+                            <constraint firstItem="ejd-H2-2qs" firstAttribute="top" secondItem="e1K-3e-75e" secondAttribute="bottom" constant="20" id="3wl-Jk-uAw"/>
+                            <constraint firstItem="ejd-H2-2qs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4Pb-Cd-Ezg"/>
+                            <constraint firstItem="8gt-RY-dMC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="55j-Yc-Qdu"/>
+                            <constraint firstItem="xs8-bU-CHM" firstAttribute="top" secondItem="zJp-xR-m9U" secondAttribute="bottom" constant="20" id="6O8-za-Ver"/>
+                            <constraint firstItem="xs8-bU-CHM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CJh-sS-GQC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e1K-3e-75e" secondAttribute="trailing" constant="20" id="Cht-24-cnq"/>
+                            <constraint firstItem="ttS-O2-U4N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Gsd-uz-pai"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u4k-gr-2Os" secondAttribute="trailing" constant="20" id="KvV-SV-l6h"/>
+                            <constraint firstItem="zJp-xR-m9U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="M6w-l4-8FW"/>
+                            <constraint firstItem="qfG-ce-uGD" firstAttribute="top" secondItem="8gt-RY-dMC" secondAttribute="bottom" constant="20" id="Mzw-fu-ORC"/>
+                            <constraint firstItem="e1K-3e-75e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PZF-s0-T0e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WVL-Pg-N6t" secondAttribute="bottom" constant="20" id="YNw-iK-YMI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ttS-O2-U4N" secondAttribute="trailing" constant="20" id="atR-mU-f9j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qfG-ce-uGD" secondAttribute="bottom" constant="20" id="bs8-QK-3ql"/>
+                            <constraint firstItem="e1K-3e-75e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="dRu-ck-1aK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WVL-Pg-N6t" secondAttribute="trailing" constant="20" id="eJm-Ku-yVN"/>
+                            <constraint firstItem="WVL-Pg-N6t" firstAttribute="top" secondItem="u4k-gr-2Os" secondAttribute="bottom" constant="20" id="fJu-Wy-amM"/>
+                            <constraint firstItem="ttS-O2-U4N" firstAttribute="top" secondItem="ejd-H2-2qs" secondAttribute="bottom" constant="50" id="k4S-vW-dve"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ejd-H2-2qs" secondAttribute="trailing" constant="20" id="qZL-Up-kv3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xs8-bU-CHM" secondAttribute="bottom" constant="20" id="w3G-lt-dDj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Current Location" id="9pu-mB-uwb"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="ejd-H2-2qs" id="tUq-Jx-8Ou"/>
+                        <outlet property="nameLabel" destination="e1K-3e-75e" id="fqm-Kq-NTA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="992.79999999999995" y="27.436281859070466"/>
+        </scene>
+        <!--Picker Search View Controller-->
+        <scene sceneID="g31-zs-ani">
+            <objects>
+                <viewController id="zbH-mS-uLI" customClass="PickerSearchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="awV-ov-LQ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oY7-fL-1Do">
+                                <rect key="frame" x="145.5" y="617" width="84" height="30"/>
+                                <state key="normal" title="Show picker"/>
+                                <connections>
+                                    <action selector="showPickerAction:" destination="zbH-mS-uLI" eventType="touchUpInside" id="djz-U6-LqB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oY7-fL-1Do" firstAttribute="centerX" secondItem="mO5-5O-pAa" secondAttribute="centerX" id="T1t-a2-XF8"/>
+                            <constraint firstItem="mO5-5O-pAa" firstAttribute="bottom" secondItem="oY7-fL-1Do" secondAttribute="bottom" constant="20" id="c7I-Zz-D1C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mO5-5O-pAa"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0kg-YS-qD6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qIK-2u-0vt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458" y="801"/>
+        </scene>
+        <!--Fetcher-->
+        <scene sceneID="rAw-8C-PmX">
+            <objects>
+                <viewController id="Uj9-rK-B5L" customClass="FetcherViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MSb-lr-5A9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qea-Qn-Esh">
+                                <rect key="frame" x="20" y="355.5" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="uVs-4s-MNq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uVs-4s-MNq" firstAttribute="leading" secondItem="IRY-H0-qLb" secondAttribute="leading" id="19q-9C-KbG"/>
+                            <constraint firstItem="IRY-H0-qLb" firstAttribute="trailing" secondItem="qea-Qn-Esh" secondAttribute="trailing" constant="20" id="A35-iQ-yKm"/>
+                            <constraint firstItem="uVs-4s-MNq" firstAttribute="trailing" secondItem="IRY-H0-qLb" secondAttribute="trailing" id="Nrr-ei-4Wa"/>
+                            <constraint firstItem="qea-Qn-Esh" firstAttribute="leading" secondItem="IRY-H0-qLb" secondAttribute="leading" constant="20" id="Vuq-Jh-Sn0"/>
+                            <constraint firstItem="uVs-4s-MNq" firstAttribute="top" secondItem="IRY-H0-qLb" secondAttribute="top" id="ihC-Kn-dJn"/>
+                            <constraint firstItem="qea-Qn-Esh" firstAttribute="centerY" secondItem="IRY-H0-qLb" secondAttribute="centerY" id="q2c-g7-3qf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IRY-H0-qLb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fetcher" id="qaR-Ze-pQe"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="qea-Qn-Esh" id="3c8-nN-4go"/>
+                        <outlet property="searchBar" destination="uVs-4s-MNq" id="5aQ-Xi-oZG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TS2-kn-3pu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279.19999999999999" y="788.45577211394311"/>
+        </scene>
+        <!--Search Result Controller-->
+        <scene sceneID="VGe-Z5-OJi">
+            <objects>
+                <viewController id="4S7-8m-nrc" customClass="ResultViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZNW-9t-pjs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15s-1t-qCU">
+                                <rect key="frame" x="20" y="84" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="15s-1t-qCU" firstAttribute="top" secondItem="8Iu-lT-UJL" secondAttribute="top" constant="20" id="3Ip-Hd-KhG"/>
+                            <constraint firstItem="8Iu-lT-UJL" firstAttribute="trailing" secondItem="15s-1t-qCU" secondAttribute="trailing" constant="20" id="Gxh-Un-VNT"/>
+                            <constraint firstItem="15s-1t-qCU" firstAttribute="leading" secondItem="8Iu-lT-UJL" secondAttribute="leading" constant="20" id="Wcr-rl-dx0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Iu-lT-UJL"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search Result Controller" id="F6K-Vt-2Yl"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="15s-1t-qCU" id="aSw-cP-wrz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HlA-U8-Nss" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1372" y="790.25487256371821"/>
+        </scene>
+        <!--Table Data-->
+        <scene sceneID="hg6-tM-XLS">
+            <objects>
+                <viewController id="gBD-oZ-ZTJ" customClass="TableDataViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hym-dT-1Lv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search kouya !!!!" translatesAutoresizingMaskIntoConstraints="NO" id="43g-kf-gm4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="43g-kf-gm4" firstAttribute="top" secondItem="9o5-iN-q2J" secondAttribute="top" id="3Cj-y6-TGL"/>
+                            <constraint firstItem="43g-kf-gm4" firstAttribute="leading" secondItem="9o5-iN-q2J" secondAttribute="leading" id="GDk-hD-W0e"/>
+                            <constraint firstItem="43g-kf-gm4" firstAttribute="trailing" secondItem="9o5-iN-q2J" secondAttribute="trailing" id="ZjB-zB-I4v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9o5-iN-q2J"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Table Data" id="gch-IN-5o1"/>
+                    <connections>
+                        <outlet property="searchBar" destination="43g-kf-gm4" id="qbg-dT-eb2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vl4-Q4-g14" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2127" y="702"/>
+        </scene>
+        <!--Search full screen-->
+        <scene sceneID="Soe-CA-oYe">
+            <objects>
+                <viewController id="mjk-Kw-QEa" customClass="SearchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sqc-kh-1Sp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqV-Yn-28L">
+                                <rect key="frame" x="20" y="350.5" width="335" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="launch:" destination="mjk-Kw-QEa" eventType="touchUpInside" id="rlY-St-Pft"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JqV-Yn-28L" firstAttribute="leading" secondItem="Sbi-VK-yPd" secondAttribute="leading" constant="20" id="1qx-d4-vLl"/>
+                            <constraint firstItem="Sbi-VK-yPd" firstAttribute="trailing" secondItem="JqV-Yn-28L" secondAttribute="trailing" constant="20" id="90x-Ne-cxo"/>
+                            <constraint firstItem="JqV-Yn-28L" firstAttribute="centerY" secondItem="Sbi-VK-yPd" secondAttribute="centerY" id="nVF-OV-O4C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sbi-VK-yPd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search full screen" id="dVc-nM-aS0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZMb-x1-A3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1789" y="21"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wnN-EQ-joX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uzw-9M-r4j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aZZ-O0-QLG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="n51-Fd-R3r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WoU-zS-zHz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15.199999999999999" y="-670.61469265367316"/>
         </scene>
     </scenes>
 </document>
